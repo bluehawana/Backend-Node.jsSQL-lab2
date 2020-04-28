@@ -9,7 +9,7 @@ app.get('/movies', (req, res) => {
     
     let sqlString = req.query.awards ? " where Movies.awards = ?" : ""
     let movieID = req.query.awards
-    // men kan visa alla movies som har awards, till exempel localhost:3000/movies?awards=oscar/=Golden Global Awards
+    
 
     let query = `SELECT Title,Director,Actors.actorName,Awards From Movies 
     JOIN Actors_Movies ON Actors_Movies.Movie_ID=Movies.ID 
